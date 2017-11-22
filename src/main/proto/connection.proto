@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "ru.mipt.java2017.hw2";
+option java_outer_classname = "ConnectionProto";
+
+package ru.mipt.java2017.hw2;
+
+service SumSolver {
+  rpc GetSum (SumRequest) returns (SumResponse) {}
+}
+
+message SumRequest {
+  int64 left = 1;
+  int64 right = 2;
+}
+
+message SumResponse {
+  int64 sum = 1;
+}
